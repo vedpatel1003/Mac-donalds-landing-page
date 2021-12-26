@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" width="123%" class="logo" alt="Starbucks Logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="">Home</a> </li>
+                <li><a href="">Menu</a> </li>
+                <li><a href="">What's New</a> </li>
+                <li><a href="">Contact Us</a> </li>
+            </ul>
+        </header>
+        <div class=" content">
+            <div class="textBox">
+
+                <h2>It's not just Burger <br> It's <span>Mac'donald</span></h2>
+                <p>Every day, Mac'Donalds partners go to work hoping to do two <br>things
+                    : share great Burger with friends and help make <br>the world a little better.
+                    It was true when the first Mac'donalds opened in 1955.<br> </p>
+                <a href="">Learn More</a>
+
+            </div>
+            <div class="imgBox">
+                <img src="full image.png"  class="starbucks" width="164%" alt="Starbucks">
+            </div>
+
+        </div>
+        <ul class="thumb">
+            <li><img src="1.photo.jpg" onclick="imgSlider('1.photo.jpg');chaneCircleColor('#017143')" alt="Starbucks shake"></li>
+            <li><img src="2.photo.jpg" onclick="imgSlider('2.photo.jpg');chaneCircleColor('#eb7495')" alt="Starbucks shake"></li>
+            <li><img src="3.photo.jpg" onclick="imgSlider('3.photo.jpg');chaneCircleColor('#d752b1')" alt="Starbucks shake"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="facebook.png" alt="social media icon"></a></li>
+            <li><a href=""><img src="twitter.png" width="14" alt="social media icon"></a></li>
+            <li><a href=""><img src="instagram.png" alt="social media icon"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script>
+        
+
+function imgSlider(img){
+    document.querySelector('.starbucks').src = img;
+    }
+
+    
+
+    function chaneCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color; 
+    }
+   
+    
+    function toggleMenu(color){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
+    </script>
+</body>
+
+</html>
